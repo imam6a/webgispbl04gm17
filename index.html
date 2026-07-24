@@ -124,6 +124,36 @@
             height: 100% !important;
         }
 
+        /* Stylist Tambahan untuk Control Layer Switcher */
+        .layer-switcher {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 999;
+        }
+
+        .layer-switcher button {
+            background-color: #ffffff !important;
+            border: 1px solid #cbd5e1 !important;
+            border-radius: 6px !important;
+            width: 38px !important;
+            height: 38px !important;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .layer-switcher .panel {
+            background: #ffffff !important;
+            padding: 12px 16px !important;
+            border-radius: 8px !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15) !important;
+            max-height: 350px;
+            overflow-y: auto;
+            font-size: 0.85rem;
+            color: #1e293b;
+            border: 1px solid #e2e8f0;
+        }
+
         /* 3. Kontak Section */
         #kontak {
             background-color: #ffffff;
@@ -235,7 +265,7 @@
             &copy; 2026 WebGIS Tanjung Riau | Pemetaan Partisipatif Fasos & Fasum
         </footer>
 
-        <!-- SCRIPT JAVASCRIPT BAWAAN QGIS2WEB (TETAP DIJAGA) -->
+        <!-- SCRIPT JAVASCRIPT BAWAAN QGIS2WEB -->
         <script src="resources/qgis2web_expressions.js"></script>
         <script src="./resources/functions.js"></script>
         <script src="./resources/ol.js"></script>
@@ -285,8 +315,18 @@
         <script src="./resources/Autolinker.min.js"></script>
         <script src="./resources/qgis2web.js"></script>        
 
-        <!-- Script untuk otomatis update ukuran peta OpenLayers saat di-scroll -->
+        <!-- SCRIPT UNTUK CONTROL LAYER SWITCHER & AUTO RESIZE -->
         <script>
+          // Menambahkan kontrol Layer Switcher ke peta OpenLayers jika belum terpasang otomatis
+          if (typeof map !== 'undefined') {
+            var layerSwitcher = new ol.control.LayerSwitcher({
+              tipLabel: 'Daftar Layer',
+              groupSelectStyle: 'children'
+            });
+            map.addControl(layerSwitcher);
+          }
+
+          // Menyesuaikan ulang ukuran peta jika window di-resize
           window.addEventListener('resize', function() {
             if (typeof map !== 'undefined') {
               map.updateSize();
