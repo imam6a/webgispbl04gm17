@@ -185,7 +185,7 @@
             border-bottom: none;
         }
 
-        /* Styling Section Hasil Produk & Dokumentasi */
+        /* Styling Section Hasil Produk & Dokumentasi (RASIO A4 FULL DISPLAY) */
         .media-card {
             background: #ffffff;
             border-radius: 16px;
@@ -215,8 +215,8 @@
 
         .media-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 22px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
         }
 
         .media-item {
@@ -226,6 +226,8 @@
             border: 1px solid #6ee7b7;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .media-item:hover {
@@ -233,23 +235,36 @@
             box-shadow: 0 8px 20px rgba(4, 120, 87, 0.15);
         }
 
+        /* Container gambar rasio A4 (Standar Landscape A4 297x210) */
+        .img-container-a4 {
+            width: 100%;
+            aspect-ratio: 297 / 210; /* Proporsi kertas A4 Landscape */
+            background-color: #e6f4ea;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-bottom: 1px solid #d1fae5;
+        }
+
         .media-img {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
+            height: 100%;
+            object-fit: contain; /* Gambar ditampilkan UTUH/PENUH tanpa terpotong */
+            padding: 4px;
+            box-sizing: border-box;
         }
 
         .media-caption {
             padding: 12px 14px;
-            font-size: 0.88rem;
+            font-size: 0.9rem;
             font-weight: 700;
             color: #064e3b;
-            min-height: 42px;
+            min-height: 48px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-top: 1px solid #d1fae5;
+            background-color: #f0fdf4;
         }
 
         /* 2. Map Section */
@@ -475,44 +490,58 @@
                 <div class="media-grid">
                     <!-- Produk 1 -->
                     <div class="media-item">
-                        <img src="PETA AREA KERJA K12.jpg" alt="Peta Area Kerja K12" class="media-img">
-                        <div class="media-caption">Peta Area Kerja K12</div>
+                        <div class="img-container-a4">
+                            <img src="PETA AREA KERJA K12.jpg" alt="Peta Area Kerja K12" class="media-img">
+                        </div>
+                        <div class="media-caption">Peta Area Kerja</div>
                     </div>
 
                     <!-- Produk 2 -->
                     <div class="media-item">
-                        <img src="LAYOUT PETA BATAS ADMINISTRASI RT DAN RW KAMPUNG TUA TANJUNG RIAU.jpg" alt="Layout Peta Batas Administrasi" class="media-img">
-                        <div class="media-caption">Layout Peta Batas Administrasi RT & RW Kampung Tua Tanjung Riau</div>
+                        <div class="img-container-a4">
+                            <img src="LAYOUT PETA BATAS ADMINISTRASI RT DAN RW KAMPUNG TUA TANJUNG RIAU.jpg" alt="Peta Batas Administrasi" class="media-img">
+                        </div>
+                        <div class="media-caption">Peta Batas Administrasi RT & RW</div>
                     </div>
 
                     <!-- Produk 3 -->
                     <div class="media-item">
-                        <img src="PETA PENGGUNAAN LAHAN BERBASIS OBIA.jpg" alt="Peta Penggunaan Lahan OBIA" class="media-img">
+                        <div class="img-container-a4">
+                            <img src="PETA PENGGUNAAN LAHAN BERBASIS OBIA.jpg" alt="Peta Penggunaan Lahan OBIA" class="media-img">
+                        </div>
                         <div class="media-caption">Peta Penggunaan Lahan Berbasis OBIA</div>
                     </div>
 
                     <!-- Produk 4 -->
                     <div class="media-item">
-                        <img src="PETA FOTO UDARA KELOMPOK 12.jpg" alt="Peta Foto Udara" class="media-img">
-                        <div class="media-caption">Peta Foto Udara Kelompok 12</div>
+                        <div class="img-container-a4">
+                            <img src="PETA FOTO UDARA KELOMPOK 12.jpg" alt="Peta Foto Udara" class="media-img">
+                        </div>
+                        <div class="media-caption">Peta Foto Udara</div>
                     </div>
 
                     <!-- Produk 5 -->
                     <div class="media-item">
-                        <img src="Layout Peta Jaringan Lingkungan.jpg" alt="Layout Peta Jaringan Lingkungan" class="media-img">
-                        <div class="media-caption">Layout Peta Jaringan Lingkungan</div>
+                        <div class="img-container-a4">
+                            <img src="Layout Peta Jaringan Lingkungan.jpg" alt="Peta Jaringan Lingkungan" class="media-img">
+                        </div>
+                        <div class="media-caption">Peta Jaringan Lingkungan</div>
                     </div>
 
                     <!-- Produk 6 -->
                     <div class="media-item">
-                        <img src="LAYOUT PETA PERSEBARAN FASOS DAN FASUM.jpg" alt="Layout Peta Persebaran Fasos Fasum" class="media-img">
-                        <div class="media-caption">Layout Peta Persebaran Fasos dan Fasum</div>
+                        <div class="img-container-a4">
+                            <img src="LAYOUT PETA PERSEBARAN FASOS DAN FASUM.jpg" alt="Peta Persebaran Fasos Fasum" class="media-img">
+                        </div>
+                        <div class="media-caption">Peta Persebaran Fasos dan Fasum</div>
                     </div>
 
                     <!-- Produk 7 -->
                     <div class="media-item">
-                        <img src="Layout Peta Buffer Fasos Fasum.jpg" alt="Layout Peta Buffer Fasos Fasum" class="media-img">
-                        <div class="media-caption">Layout Peta Buffer Fasos & Fasum</div>
+                        <div class="img-container-a4">
+                            <img src="Layout Peta Buffer Fasos Fasum.jpg" alt="Peta Buffer Fasos Fasum" class="media-img">
+                        </div>
+                        <div class="media-caption">Peta Buffer Jangkauan Fasos & Fasum</div>
                     </div>
                 </div>
             </div>
@@ -524,16 +553,22 @@
                 
                 <div class="media-grid">
                     <div class="media-item">
-                        <img src="dok1.jpg" alt="Survei Lapangan" class="media-img">
-                        <div class="media-caption">Pengambilan Data Lapangan</div>
+                        <div class="img-container-a4">
+                            <img src="dok1.jpg" alt="Survei Lapangan" class="media-img">
+                        </div>
+                        <div class="media-caption">Dokumentasi Survei Lapangan</div>
                     </div>
                     <div class="media-item">
-                        <img src="dok2.jpg" alt="Pemetaan Partisipatif" class="media-img">
-                        <div class="media-caption">Koordinasi dengan Masyarakat</div>
+                        <div class="img-container-a4">
+                            <img src="dok2.jpg" alt="Pemetaan Partisipatif" class="media-img">
+                        </div>
+                        <div class="media-caption">Dokumentasi Pemetaan Partisipatif</div>
                     </div>
                     <div class="media-item">
-                        <img src="dok3.jpg" alt="Pengolahan Data" class="media-img">
-                        <div class="media-caption">Pengolahan Data di QGIS</div>
+                        <div class="img-container-a4">
+                            <img src="dok3.jpg" alt="Pengolahan Data" class="media-img">
+                        </div>
+                        <div class="media-caption">Dokumentasi Pengolahan Data</div>
                     </div>
                 </div>
             </div>
