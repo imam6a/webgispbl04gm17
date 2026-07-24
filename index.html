@@ -185,6 +185,73 @@
             border-bottom: none;
         }
 
+        /* Styling Section Hasil Produk & Dokumentasi */
+        .media-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(4, 120, 87, 0.08);
+            border: 1px solid #a7f3d0;
+            max-width: 1000px;
+            margin: 35px auto 0 auto;
+            text-align: center;
+        }
+
+        .media-card h3 {
+            margin-top: 0;
+            color: #064e3b;
+            font-size: 1.3rem;
+            font-weight: 700;
+            border-bottom: 2px solid #10b981;
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+
+        .media-subtitle {
+            color: #166534;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 22px;
+        }
+
+        .media-item {
+            background: #f0fdf4;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #6ee7b7;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .media-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(4, 120, 87, 0.15);
+        }
+
+        .media-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .media-caption {
+            padding: 12px 14px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: #064e3b;
+            min-height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top: 1px solid #d1fae5;
+        }
+
         /* 2. Map Section */
         #map-section {
             max-width: 100%;
@@ -399,6 +466,78 @@
                     </tr>
                 </table>
             </div>
+
+            <!-- KARTU HASIL PRODUK PEMETAAN -->
+            <div class="media-card">
+                <h3>🗺️ Hasil Produk Pemetaan</h3>
+                <p class="media-subtitle">Produk visualisasi data spasial dan layout peta hasil analisis PBL Kelompok 12.</p>
+                
+                <div class="media-grid">
+                    <!-- Produk 1 -->
+                    <div class="media-item">
+                        <img src="PETA AREA KERJA K12.jpg" alt="Peta Area Kerja K12" class="media-img">
+                        <div class="media-caption">Peta Area Kerja K12</div>
+                    </div>
+
+                    <!-- Produk 2 -->
+                    <div class="media-item">
+                        <img src="LAYOUT PETA BATAS ADMINISTRASI RT DAN RW KAMPUNG TUA TANJUNG RIAU.jpg" alt="Layout Peta Batas Administrasi" class="media-img">
+                        <div class="media-caption">Layout Peta Batas Administrasi RT & RW Kampung Tua Tanjung Riau</div>
+                    </div>
+
+                    <!-- Produk 3 -->
+                    <div class="media-item">
+                        <img src="PETA PENGGUNAAN LAHAN BERBASIS OBIA.jpg" alt="Peta Penggunaan Lahan OBIA" class="media-img">
+                        <div class="media-caption">Peta Penggunaan Lahan Berbasis OBIA</div>
+                    </div>
+
+                    <!-- Produk 4 -->
+                    <div class="media-item">
+                        <img src="PETA FOTO UDARA KELOMPOK 12.jpg" alt="Peta Foto Udara" class="media-img">
+                        <div class="media-caption">Peta Foto Udara Kelompok 12</div>
+                    </div>
+
+                    <!-- Produk 5 -->
+                    <div class="media-item">
+                        <img src="Layout Peta Jaringan Lingkungan.jpg" alt="Layout Peta Jaringan Lingkungan" class="media-img">
+                        <div class="media-caption">Layout Peta Jaringan Lingkungan</div>
+                    </div>
+
+                    <!-- Produk 6 -->
+                    <div class="media-item">
+                        <img src="LAYOUT PETA PERSEBARAN FASOS DAN FASUM.jpg" alt="Layout Peta Persebaran Fasos Fasum" class="media-img">
+                        <div class="media-caption">Layout Peta Persebaran Fasos dan Fasum</div>
+                    </div>
+
+                    <!-- Produk 7 -->
+                    <div class="media-item">
+                        <img src="Layout Peta Buffer Fasos Fasum.jpg" alt="Layout Peta Buffer Fasos Fasum" class="media-img">
+                        <div class="media-caption">Layout Peta Buffer Fasos & Fasum</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KARTU DOKUMENTASI KEGIATAN -->
+            <div class="media-card">
+                <h3>📷 Dokumentasi Kegiatan</h3>
+                <p class="media-subtitle">Dokumentasi proses pemetaan partisipatif dan survei lapangan.</p>
+                
+                <div class="media-grid">
+                    <div class="media-item">
+                        <img src="dok1.jpg" alt="Survei Lapangan" class="media-img">
+                        <div class="media-caption">Pengambilan Data Lapangan</div>
+                    </div>
+                    <div class="media-item">
+                        <img src="dok2.jpg" alt="Pemetaan Partisipatif" class="media-img">
+                        <div class="media-caption">Koordinasi dengan Masyarakat</div>
+                    </div>
+                    <div class="media-item">
+                        <img src="dok3.jpg" alt="Pengolahan Data" class="media-img">
+                        <div class="media-caption">Pengolahan Data di QGIS</div>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         <!-- 2. SECTION MAP (PETA INTERAKTIF) -->
